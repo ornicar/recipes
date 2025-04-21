@@ -1,0 +1,38 @@
+default_units = true             # use bundled units
+warnings_as_errors = false       # treat any warning as an error
+recipe_ref_check = true          # check recipe references
+max_depth = 10                   # max depth to search for recipe references
+
+# enabled extensions
+# this can also be `extensions = "all"` or `extensions = "none"`
+[extensions]
+COMPONENT_ALIAS = true
+ADVANCED_UNITS = true
+MODES = true
+RANGE_VALUES = true
+TIMER_REQUIRES_TIME = true
+INTERMEDIATE_PREPARATIONS = true
+
+# load is used to tell chef to load extra configuration files
+# * the default is empty, but see below
+[load] 
+# units = ["path/to/a/units.toml"] # load extra units files
+# aisle = "path/to/aisle.conf"     # load aisle.conf
+
+# configuration of the web ui (currently only tags emojis)
+[ui.tags]
+mexican = { emoji = ":taco:" }   # * the default is emtpy
+
+# export format configuration (currently only markdown)
+[export.markdown]
+tags = true                      # show tags
+description = "blockquote"       # or "heading" or "hidden"
+escape_step_numbers = false      # everything is a paragraph
+italic_amounts = true            # put amounts in italics
+front_matter_name = "name"       # key "name" in the frontmatter with the recipe name
+heading.section = "Section %n"   # used in sections without name. `%n` is the section number
+heading.ingredients = "Ingredients"
+heading.cookware = "Cookware"
+heading.steps = "Steps"
+heading.description = "Description" # used when `description = "heading"
+optional_marker = "(optional)"
