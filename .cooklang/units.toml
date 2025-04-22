@@ -1,0 +1,18 @@
+# default_system = "metric"
+#
+# [fractions.unit]
+# cc = {  max_whole = 5, max_denominator = 8 }
+# cs = {  max_whole = 5, max_denominator = 8 }
+#
+# [[quantity]]
+# quantity = "volume"
+# best = { metric = ["ml", "l", "cc", "cs"], imperial = ["cup", "tsp", "tbsp"] }
+# [quantity.units]
+# metric = [
+#     { names = ["cuillère à café", "cuillères à café"], symbols = ["cc"], ratio = 0.004_928_921 },
+#     { names = ["cuillère à soupe", "cuillères à soupe"], symbols = ["cs"], ratio = 0.014_786_764 },
+# ]
+
+# gousse = { names = ["gousse", "gousses"] }
+# cc = { names = ["cuillère à café", "cuillères à café"] }
+# cs = { names = ["cuillère à soupe", "cuillères à soupe"] }

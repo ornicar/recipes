@@ -31,8 +31,3 @@ escape_step_numbers = false      # everything is a paragraph
 italic_amounts = true            # put amounts in italics
 front_matter_name = "name"       # key "name" in the frontmatter with the recipe name
 heading.section = "Section %n"   # used in sections without name. `%n` is the section number
-heading.ingredients = "Ingrédients"
-heading.cookware = "Matériel"
-heading.steps = "Étapes"
-heading.description = "Description" # used when `description = "heading"
-optional_marker = "(optional)"
