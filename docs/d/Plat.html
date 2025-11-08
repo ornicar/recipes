@@ -1,0 +1,796 @@
+
+<!doctype html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="icon" type="image/png" href="../favicon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&family=Noto+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../styles.css" />
+
+    <!-- Javascript dependencies -->
+    <script defer src="../vendor/htmx.min.js"></script>
+    <script defer src="../vendor/htmx-ext/json-enc.js"></script>
+    <script defer src="../vendor/floating-ui.core.umd.min.js"></script>
+    <script defer src="../vendor/floating-ui.dom.umd.min.js"></script>
+    <script defer src="../vendor/twemoji.min.js"></script>
+
+    <!-- Custom javascript -->
+    <script>
+      const currentLocale = "fr";
+    </script>
+    <script src="../js/critical-theme.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/hot-reload.js"></script>
+    <script defer src="../js/timer.js"></script>
+
+    <title>La tambouille</title>
+    
+  </head>
+  <body hx-boost="true">
+    <!-- dummy element to trigger hot reload events -->
+    <div
+      id="hot-reload-target"
+      hx-get="/"
+      hx-trigger="hot-reload"
+      hx-target="#content"
+      hx-select="#content"
+    ></div>
+    <div class="flex min-h-screen flex-col">
+      <header hx-preserve id="header">
+        <nav class="mx-auto flex max-w-screen-xl items-center px-4 py-2">
+          <div class="flex-1">
+            <a
+              href="../index.html"
+              class="inline-flex h-12 flex-grow-0 items-center rounded px-4 font-heading text-xl font-bold text-primary-12 hover:bg-base-4"
+              hx-boost="false"
+              >La tambouille</a
+            >
+          </div>
+
+          <div class="relative size-12">
+            <div class="absolute inset-0 grid place-items-center">
+              <div
+                id="hot-reload-indicator"
+                class="mx-4 block size-4 rounded-full border-2 transition-colors"
+              ></div>
+            </div>
+            <div
+              id="hot-reload-tooltip"
+              class="absolute inset-0 mx-2"
+              data-tooltip="Mise à jour automatique du contenu"
+              data-tooltip-alt="Aucune mise à jour automatique disponible. Rechargez pour réessayer."
+            ></div>
+          </div>
+
+          <div>
+            <button
+              theme-btn
+              id="theme-toggle-button"
+              class="btn m-1 inline-grid size-9 place-items-center text-xl text-green-11 hover:bg-green-4 dark:text-indigo-11 dark:hover:bg-indigo-4"
+            >
+              <i class="i-lucide-sun dark:i-lucide-moon"></i>
+              <span class="sr-only">Thème</span>
+            </button>
+          </div>
+        </nav>
+        <div class="divider border-dashed px-4 text-2xl sm:px-10">
+          <span class="i-lucide-chef-hat"></span>
+        </div>
+      </header>
+
+      <main
+        class=" container mx-auto my-10 flex-grow px-3"
+      >
+        
+  <form
+  class="mb-8 flex w-full items-center justify-center gap-4"
+  action="http://chef.freeboxos.fr/search"
+  method="get"
+>
+  <div class="relative flex w-full justify-center">
+    <input
+      class="w-full rounded-bl rounded-tl border border-r-0 border-base-7 bg-gray-50 px-2 text-black [color-scheme:light] hover:border-base-8 focus:z-10 md:max-w-72"
+      type="search"
+      name="q"
+      id="search"
+      autocomplete="off"
+      placeholder="Rechercher"
+      value=""
+      hx-get="/search"
+      hx-trigger="input changed delay:500ms, search"
+      hx-target="#content"
+      hx-indicator=".htmx-indicator"
+      hx-push-url="true"
+    />
+    <button
+      class="relative grid size-10 place-items-center rounded-br rounded-tr border border-base-7 bg-base-3  text-base-11 hover:bg-base-4 focus:z-10 active:bg-base-5"
+    >
+      <span class="htmx-indicator absolute inset-0">
+        <i
+          aria-hidden="true"
+          class="i-lucide-loader-2 aspect-square h-full animate-spin text-xl text-primary-9"
+        ></i>
+      </span>
+      <i class="inv-htmx-indicator i-lucide-search"></i>
+    </button>
+  </div>
+</form>
+
+  <div id="content">
+    <!-- breadcrum -->
+    <div class="m-4">
+      <a href="../index.html" class="link"><i class="i-lucide-folder"></i></a>
+      <span class="m-1 font-mono font-bold text-base-11">/</span>
+      
+        
+          
+          <a href="Plat.html" class="link font-mono">Plat</a>
+          
+        
+      
+    </div>
+
+    <!-- folders -->
+    <div class="flex flex-col flex-wrap gap-6 sm:flex-row">
+      
+    </div>
+    
+    
+
+
+
+<div
+  class="grid grid-cols-1 items-stretch justify-items-stretch gap-6 lg:grid-cols-2 2xl:grid-cols-3"
+  id="recipe-grid"
+>
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+            <a href="../r/Plat/Bourguignon%20de%20PST.html" class="flex-1 self-stretch md:relative">
+              <figure
+                class="inset-0 h-full max-h-52 overflow-hidden border-b-4 border-primary-9 md:absolute md:max-h-none md:border-b-0 md:border-r-4"
+              >
+                <img
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform hover:scale-[1.01]"
+                  src="../src/Plat/Bourguignon%20de%20PST.png"
+                  alt="Bourguignon de PST"
+                />
+              </figure>
+            </a>
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Plat/Bourguignon%20de%20PST.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Bourguignon de PST
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Plat/Bourguignon%20de%20PST.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+            <a href="../r/Plat/Chorba%20aux%20haricots%20blancs.html" class="flex-1 self-stretch md:relative">
+              <figure
+                class="inset-0 h-full max-h-52 overflow-hidden border-b-4 border-primary-9 md:absolute md:max-h-none md:border-b-0 md:border-r-4"
+              >
+                <img
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform hover:scale-[1.01]"
+                  src="../src/Plat/Chorba%20aux%20haricots%20blancs.png"
+                  alt="Chorba aux haricots blancs"
+                />
+              </figure>
+            </a>
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Plat/Chorba%20aux%20haricots%20blancs.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Chorba aux haricots blancs
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Plat/Chorba%20aux%20haricots%20blancs.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+            <a href="../r/Plat/Dahl%20de%20camping.html" class="flex-1 self-stretch md:relative">
+              <figure
+                class="inset-0 h-full max-h-52 overflow-hidden border-b-4 border-primary-9 md:absolute md:max-h-none md:border-b-0 md:border-r-4"
+              >
+                <img
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform hover:scale-[1.01]"
+                  src="../src/Plat/Dahl%20de%20camping.webp"
+                  alt="Dahl de camping"
+                />
+              </figure>
+            </a>
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Plat/Dahl%20de%20camping.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Dahl de camping
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Plat/Dahl%20de%20camping.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+            <a href="../r/Plat/Garlic%20potato%20stacks.html" class="flex-1 self-stretch md:relative">
+              <figure
+                class="inset-0 h-full max-h-52 overflow-hidden border-b-4 border-primary-9 md:absolute md:max-h-none md:border-b-0 md:border-r-4"
+              >
+                <img
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform hover:scale-[1.01]"
+                  src="../src/Plat/Garlic%20potato%20stacks.jpg"
+                  alt="Garlic potato stacks"
+                />
+              </figure>
+            </a>
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Plat/Garlic%20potato%20stacks.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Garlic potato stacks
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Plat/Garlic%20potato%20stacks.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+            <a href="../r/Plat/Haricots%20verts%20du%20Sichuan.html" class="flex-1 self-stretch md:relative">
+              <figure
+                class="inset-0 h-full max-h-52 overflow-hidden border-b-4 border-primary-9 md:absolute md:max-h-none md:border-b-0 md:border-r-4"
+              >
+                <img
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform hover:scale-[1.01]"
+                  src="../src/Plat/Haricots%20verts%20du%20Sichuan.jpg"
+                  alt="Haricots verts du Sichuan"
+                />
+              </figure>
+            </a>
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Plat/Haricots%20verts%20du%20Sichuan.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Haricots verts du Sichuan
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Plat/Haricots%20verts%20du%20Sichuan.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+            <a href="../r/Plat/Lentilles%20aux%20épices.html" class="flex-1 self-stretch md:relative">
+              <figure
+                class="inset-0 h-full max-h-52 overflow-hidden border-b-4 border-primary-9 md:absolute md:max-h-none md:border-b-0 md:border-r-4"
+              >
+                <img
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform hover:scale-[1.01]"
+                  src="../src/Plat/Lentilles%20aux%20épices.png"
+                  alt="Lentilles aux épices"
+                />
+              </figure>
+            </a>
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Plat/Lentilles%20aux%20épices.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Lentilles aux épices
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Plat/Lentilles%20aux%20épices.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+            <a href="../r/Plat/Tarte%20à%20la%20tomate.html" class="flex-1 self-stretch md:relative">
+              <figure
+                class="inset-0 h-full max-h-52 overflow-hidden border-b-4 border-primary-9 md:absolute md:max-h-none md:border-b-0 md:border-r-4"
+              >
+                <img
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform hover:scale-[1.01]"
+                  src="../src/Plat/Tarte%20à%20la%20tomate.png"
+                  alt="Tarte à la tomate"
+                />
+              </figure>
+            </a>
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Plat/Tarte%20à%20la%20tomate.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Tarte à la tomate
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Plat/Tarte%20à%20la%20tomate.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+            <a href="../r/Plat/Velouté%20de%20butternut%20au%20miso%20et%20gingembre.html" class="flex-1 self-stretch md:relative">
+              <figure
+                class="inset-0 h-full max-h-52 overflow-hidden border-b-4 border-primary-9 md:absolute md:max-h-none md:border-b-0 md:border-r-4"
+              >
+                <img
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform hover:scale-[1.01]"
+                  src="../src/Plat/Velouté%20de%20butternut%20au%20miso%20et%20gingembre.jpg"
+                  alt="Velouté de butternut au miso et gingembre"
+                />
+              </figure>
+            </a>
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Plat/Velouté%20de%20butternut%20au%20miso%20et%20gingembre.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Velouté de butternut au miso et gingembre
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Plat/Velouté%20de%20butternut%20au%20miso%20et%20gingembre.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+            <a href="../r/Plat/Wraps.html" class="flex-1 self-stretch md:relative">
+              <figure
+                class="inset-0 h-full max-h-52 overflow-hidden border-b-4 border-primary-9 md:absolute md:max-h-none md:border-b-0 md:border-r-4"
+              >
+                <img
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform hover:scale-[1.01]"
+                  src="../src/Plat/Wraps.png"
+                  alt="Wraps"
+                />
+              </figure>
+            </a>
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Plat/Wraps.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Wraps
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Plat/Wraps.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+            <a href="../r/Plat/Émincé%20de%20seitan%20croustillant%20à%20l'orange.html" class="flex-1 self-stretch md:relative">
+              <figure
+                class="inset-0 h-full max-h-52 overflow-hidden border-b-4 border-primary-9 md:absolute md:max-h-none md:border-b-0 md:border-r-4"
+              >
+                <img
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform hover:scale-[1.01]"
+                  src="../src/Plat/Émincé%20de%20seitan%20croustillant%20à%20l'orange.jpg"
+                  alt="Émincé de seitan croustillant à l&#x27;orange"
+                />
+              </figure>
+            </a>
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Plat/Émincé%20de%20seitan%20croustillant%20à%20l'orange.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Émincé de seitan croustillant à l&#x27;orange
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Plat/Émincé%20de%20seitan%20croustillant%20à%20l'orange.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Plat/Émincé%20de%20seitan%20flexible.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Émincé de seitan flexible
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Plat/Émincé%20de%20seitan%20flexible.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  
+</div>
+<div class="mx-auto">
+  
+    <!-- <img -->
+    <!--   src="/kitchen.png" -->
+    <!--   aria-hidden="true" -->
+    <!--   class="mx-auto p-8 md:max-w-[50%]" -->
+    <!-- /> -->
+  
+</div>
+  </div>
+
+      </main>
+
+      <!-- Timer, hidden by default -->
+      <audio
+        id="timer-audio"
+        src="../mixkit-alarm-tone-996.wav"
+        preload="none"
+      ></audio>
+      <div
+        id="timer"
+        hidden
+        class="sticky bottom-4 z-30 my-4 h-20 min-w-64 overflow-hidden rounded-xl bg-indigo-3 p-2 shadow shadow-indigo-1 md:bottom-8 md:mx-auto md:w-64"
+        hx-preserve="true"
+      >
+        <div
+          id="timer-name"
+          class="absolute left-0 right-0 top-1 text-center font-semibold capitalize text-indigo-11"
+        ></div>
+
+        <div
+          class="timer-grid h-full items-center justify-center space-x-1 text-2xl"
+        >
+          <div>
+            <button
+              id="timer-start-btn"
+              class="flex items-center justify-end text-primary-9"
+            >
+              <i class="i-lucide-play"></i>
+            </button>
+            <button
+              id="timer-pause-btn"
+              class="flex items-center justify-end text-primary-9"
+            >
+              <i class="i-lucide-pause"></i>
+            </button>
+          </div>
+
+          <div class="text-center">
+            <span
+              id="timer-text"
+              class="select-none text-4xl tabular-nums text-base-12"
+            >
+            </span>
+          </div>
+
+          <button
+            id="timer-remove-btn"
+            class="flex items-center justify-start text-red-9"
+          >
+            <i class="i-lucide-x"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-auto" hx-preserve="true" id="footer">
+        <div class="divider my-10 border-dashed px-4 sm:px-10">
+          <footer class="space-x-2 px-3">
+            <a href="https://github.com/ornicar/recipes" class="link">Source</a>
+            <span
+              aria-hidden="true"
+              class="hidden h-6 border-l-2 border-base-6 sm:inline"
+            ></span>
+            <span>
+              <i class="i-lucide-languages"></i>
+              <select
+                id="lang"
+                class="rounded border border-base-4 bg-base-2 px-1 py-0.5"
+              >
+                
+                  
+                    <option value="de">Deutsch</option>
+                  
+                
+                  
+                    <option value="en">English</option>
+                  
+                
+                  
+                    <option value="es">Español</option>
+                  
+                
+                  
+                    <option value="fr" selected>
+                      Français
+                    </option>
+                  
+                
+                  
+                    <option value="ru">Русский</option>
+                  
+                
+              </select>
+            </span>
+            <span
+              aria-hidden="true"
+              class="h-6 border-l-2 border-base-6"
+            ></span>
+            <a href="../about.html" class="link">À propos</a>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div id="toasts" hx-preserve="true" class="fixed right-0 top-0 m-2">
+      
+  
+  
+
+    </div>
+  </body>
+</html>

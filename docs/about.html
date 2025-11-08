@@ -1,0 +1,479 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <link rel="icon" type="image/png" href="favicon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&family=Noto+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="styles.css" />
+
+    <!-- Javascript dependencies -->
+    <script defer src="vendor/htmx.min.js"></script>
+    <script defer src="vendor/htmx-ext/json-enc.js"></script>
+    <script defer src="vendor/floating-ui.core.umd.min.js"></script>
+    <script defer src="vendor/floating-ui.dom.umd.min.js"></script>
+    <script defer src="vendor/twemoji.min.js"></script>
+
+    <!-- Custom javascript -->
+    <script>
+      const currentLocale = "fr";
+    </script>
+    <script src="js/critical-theme.js"></script>
+    <script defer src="js/main.js"></script>
+    <script defer src="js/hot-reload.js"></script>
+    <script defer src="js/timer.js"></script>
+
+    <title>La tambouille - à propos</title>
+    
+  </head>
+  <body hx-boost="true">
+    <!-- dummy element to trigger hot reload events -->
+    <div
+      id="hot-reload-target"
+      hx-get="/"
+      hx-trigger="hot-reload"
+      hx-target="#content"
+      hx-select="#content"
+    ></div>
+    <div class="flex min-h-screen flex-col">
+      <header hx-preserve id="header">
+        <nav class="mx-auto flex max-w-screen-xl items-center px-4 py-2">
+          <div class="flex-1">
+            <a
+              href="index.html"
+              class="inline-flex h-12 flex-grow-0 items-center rounded px-4 font-heading text-xl font-bold text-primary-12 hover:bg-base-4"
+              hx-boost="false"
+              >La tambouille</a
+            >
+          </div>
+
+          <div class="relative size-12">
+            <div class="absolute inset-0 grid place-items-center">
+              <div
+                id="hot-reload-indicator"
+                class="mx-4 block size-4 rounded-full border-2 transition-colors"
+              ></div>
+            </div>
+            <div
+              id="hot-reload-tooltip"
+              class="absolute inset-0 mx-2"
+              data-tooltip="Mise à jour automatique du contenu"
+              data-tooltip-alt="Aucune mise à jour automatique disponible. Rechargez pour réessayer."
+            ></div>
+          </div>
+
+          <div>
+            <button
+              theme-btn
+              id="theme-toggle-button"
+              class="btn m-1 inline-grid size-9 place-items-center text-xl text-green-11 hover:bg-green-4 dark:text-indigo-11 dark:hover:bg-indigo-4"
+            >
+              <i class="i-lucide-sun dark:i-lucide-moon"></i>
+              <span class="sr-only">Thème</span>
+            </button>
+          </div>
+        </nav>
+        <div class="divider border-dashed px-4 text-2xl sm:px-10">
+          <span class="i-lucide-chef-hat"></span>
+        </div>
+      </header>
+
+      <main
+        class="lg:max-w-screen-lg container mx-auto my-10 flex-grow px-3"
+      >
+        
+  <script defer src="js/about.js"></script>
+
+  <h1 class="mb-2 text-5xl">À propos</h1>
+
+  
+
+  <p><span class="font-heading font-bold">chef</span> est une application pour visualiser les recettes écrites en Cooklang d'une manière supérieure à l'expérience par défaut. <span class="font-heading font-bold">chef</span> inclut des extensions au langage Cooklang pour augmenter sa fonctionnalité. En savoir plus sur Cooklang et <span class="font-heading font-bold">chef</span> dans les liens ci-dessous.</p>
+
+  <div
+    class="m-4 mx-auto flex w-fit justify-items-center gap-6 rounded border border-base-6 bg-base-2 px-8 py-4"
+  >
+    <a
+      class="link flex flex-col items-center"
+      href="https://github.com/Zheoni/cooklang-chef"
+    >
+      <i class="i-lucide-github block"></i>
+      <div><span class="font-heading font-bold">chef</span> GitHub</div>
+    </a>
+    <a class="link flex flex-col items-center" href="https://cooklang.org/">
+      <i class="i-lucide-building block"></i>
+      <div>cooklang.org</div>
+    </a>
+  </div>
+
+  <h2 class="mb-2 text-3xl">Paramètres</h2>
+  <p>Le mode sombre respecte les préférences de votre appareil jusqu&#x27;à ce que vous le changiez. Vous pouvez l&#x27;ajuster sur l&#x27;appareil, utiliser le bouton en haut à droite ou les boutons ci-dessous.</p>
+  <div class="m-4 mx-auto flex w-fit gap-6">
+    <button
+      theme-btn
+      id="btn-light"
+      class="btn border-green-7 px-4 py-2 text-green-11 hover:bg-green-4"
+    >
+      <i class="i-lucide-sun translate-y-[0.1em]"></i>
+      Clair
+    </button>
+    <button
+      theme-btn
+      id="btn-dark"
+      class="btn border-indigo-7 px-4 py-2 text-indigo-11 hover:bg-indigo-4"
+    >
+      <i class="i-lucide-moon translate-y-[0.1em]"></i>
+      Sombre
+    </button>
+    <button
+      theme-btn
+      id="btn-system"
+      class="btn border-base-7 px-4 py-2 text-base-11 hover:bg-base-4"
+    >
+      <i class="i-lucide-monitor translate-y-[0.1em]"></i>
+      Système
+    </button>
+  </div>
+
+  <p>Le langage est automatiquement sélectionné. Si vous souhaitez le changer, vous pouvez le faire dans le pied de page du site Web. Pour revenir à la sélection automatique de la langue, utilisez le bouton ci-dessous.</p>
+  <div class="m-4 mx-auto flex w-fit gap-6">
+    <button
+      id="reset-lang"
+      class="btn border-yellow-7 px-4 py-2 text-yellow-11 hover:bg-yellow-4"
+    >
+      <i class="i-lucide-languages translate-y-[0.1em]"></i>
+      Langue du navigateur
+    </button>
+  </div>
+
+  <details remember-open id="oss">
+    <summary>
+      <h2 class="mb-2 inline-block translate-y-1 text-3xl">
+        Licences logicielles
+      </h2>
+    </summary>
+    <p class="my-2">Les licences des logiciels open source dont le code source est inclus dans <span class="font-heading font-bold">chef</span> pour la vue web sont affichées.</p>
+    <pre class="whitespace-pre-line bg-base-2 p-2 text-sm">
+HTMX
+
+Zero-Clause BSD
+=============
+
+Permission to use, copy, modify, and&#x2f;or distribute this software for
+any purpose with or without fee is hereby granted.
+
+THE SOFTWARE IS PROVIDED “AS IS” AND THE AUTHOR DISCLAIMS ALL
+WARRANTIES WITH REGARD TO THIS SOFTWARE INCLUDING ALL IMPLIED WARRANTIES
+OF MERCHANTABILITY AND FITNESS. IN NO EVENT SHALL THE AUTHOR BE LIABLE
+FOR ANY SPECIAL, DIRECT, INDIRECT, OR CONSEQUENTIAL DAMAGES OR ANY
+DAMAGES WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN
+AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, ARISING OUT
+OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+
+
+----------
+
+Twemoji
+
+MIT License
+
+Copyright (c) 2021 Twitter
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the &quot;Software&quot;), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and&#x2f;or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+----------
+
+Floating-UI (dom)
+
+MIT License
+
+Copyright (c) 2021-present Floating UI contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the &quot;Software&quot;), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and&#x2f;or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+----------
+
+Floating-UI (core)
+
+MIT License
+
+Copyright (c) 2021-present Floating UI contributors
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of
+this software and associated documentation files (the &quot;Software&quot;), to deal in
+the Software without restriction, including without limitation the rights to
+use, copy, modify, merge, publish, distribute, sublicense, and&#x2f;or sell copies of
+the Software, and to permit persons to whom the Software is furnished to do so,
+subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+
+
+----------
+</pre
+    >
+    <hr class="my-4" />
+    <pre class="whitespace-pre-line bg-base-2 p-2 text-sm">
+Typey
+
+Copyright (c) 2016, Paul J. Miller &amp; Dieter Steffmann,
+with Reserved Font Name Typey McTypeface.
+
+Copyright (c) 2016, Paul J. Miller &amp; Dieter Steffmann,
+with Reserved Font Name Typey McTypeface Italic.
+
+This Font Software is licensed under the SIL Open Font License, Version 1.1.
+This license is copied below, and is also available with a FAQ at:
+http:&#x2f;&#x2f;scripts.sil.org&#x2f;OFL
+
+
+-----------------------------------------------------------
+SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
+-----------------------------------------------------------
+
+PREAMBLE
+The goals of the Open Font License (OFL) are to stimulate worldwide
+development of collaborative font projects, to support the font creation
+efforts of academic and linguistic communities, and to provide a free and
+open framework in which fonts may be shared and improved in partnership
+with others.
+
+The OFL allows the licensed fonts to be used, studied, modified and
+redistributed freely as long as they are not sold by themselves. The
+fonts, including any derivative works, can be bundled, embedded, 
+redistributed and&#x2f;or sold with any software provided that any reserved
+names are not used by derivative works. The fonts and derivatives,
+however, cannot be released under any other type of license. The
+requirement for fonts to remain under this license does not apply
+to any document created using the fonts or their derivatives.
+
+DEFINITIONS
+&quot;Font Software&quot; refers to the set of files released by the Copyright
+Holder(s) under this license and clearly marked as such. This may
+include source files, build scripts and documentation.
+
+&quot;Reserved Font Name&quot; refers to any names specified as such after the
+copyright statement(s).
+
+&quot;Original Version&quot; refers to the collection of Font Software components as
+distributed by the Copyright Holder(s).
+
+&quot;Modified Version&quot; refers to any derivative made by adding to, deleting,
+or substituting -- in part or in whole -- any of the components of the
+Original Version, by changing formats or by porting the Font Software to a
+new environment.
+
+&quot;Author&quot; refers to any designer, engineer, programmer, technical
+writer or other person who contributed to the Font Software.
+
+PERMISSION &amp; CONDITIONS
+Permission is hereby granted, free of charge, to any person obtaining
+a copy of the Font Software, to use, study, copy, merge, embed, modify,
+redistribute, and sell modified and unmodified copies of the Font
+Software, subject to the following conditions:
+
+1) Neither the Font Software nor any of its individual components,
+in Original or Modified Versions, may be sold by itself.
+
+2) Original or Modified Versions of the Font Software may be bundled,
+redistributed and&#x2f;or sold with any software, provided that each copy
+contains the above copyright notice and this license. These can be
+included either as stand-alone text files, human-readable headers or
+in the appropriate machine-readable metadata fields within text or
+binary files as long as those fields can be easily viewed by the user.
+
+3) No Modified Version of the Font Software may use the Reserved Font
+Name(s) unless explicit written permission is granted by the corresponding
+Copyright Holder. This restriction only applies to the primary font name as
+presented to the users.
+
+4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font
+Software shall not be used to promote, endorse or advertise any
+Modified Version, except to acknowledge the contribution(s) of the
+Copyright Holder(s) and the Author(s) or with their explicit written
+permission.
+
+5) The Font Software, modified or unmodified, in part or in whole,
+must be distributed entirely under this license, and must not be
+distributed under any other license. The requirement for fonts to
+remain under this license does not apply to any document created
+using the Font Software.
+
+TERMINATION
+This license becomes null and void if any of the above conditions are
+not met.
+
+DISCLAIMER
+THE FONT SOFTWARE IS PROVIDED &quot;AS IS&quot;, WITHOUT WARRANTY OF ANY KIND,
+EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF
+MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT
+OF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE
+COPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,
+INCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL
+DAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
+FROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM
+OTHER DEALINGS IN THE FONT SOFTWARE.
+</pre
+    >
+  </details>
+
+      </main>
+
+      <!-- Timer, hidden by default -->
+      <audio
+        id="timer-audio"
+        src="mixkit-alarm-tone-996.wav"
+        preload="none"
+      ></audio>
+      <div
+        id="timer"
+        hidden
+        class="sticky bottom-4 z-30 my-4 h-20 min-w-64 overflow-hidden rounded-xl bg-indigo-3 p-2 shadow shadow-indigo-1 md:bottom-8 md:mx-auto md:w-64"
+        hx-preserve="true"
+      >
+        <div
+          id="timer-name"
+          class="absolute left-0 right-0 top-1 text-center font-semibold capitalize text-indigo-11"
+        ></div>
+
+        <div
+          class="timer-grid h-full items-center justify-center space-x-1 text-2xl"
+        >
+          <div>
+            <button
+              id="timer-start-btn"
+              class="flex items-center justify-end text-primary-9"
+            >
+              <i class="i-lucide-play"></i>
+            </button>
+            <button
+              id="timer-pause-btn"
+              class="flex items-center justify-end text-primary-9"
+            >
+              <i class="i-lucide-pause"></i>
+            </button>
+          </div>
+
+          <div class="text-center">
+            <span
+              id="timer-text"
+              class="select-none text-4xl tabular-nums text-base-12"
+            >
+            </span>
+          </div>
+
+          <button
+            id="timer-remove-btn"
+            class="flex items-center justify-start text-red-9"
+          >
+            <i class="i-lucide-x"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-auto" hx-preserve="true" id="footer">
+        <div class="divider my-10 border-dashed px-4 sm:px-10">
+          <footer class="space-x-2 px-3">
+            <a href="https://github.com/ornicar/recipes" class="link">Source</a>
+            <span
+              aria-hidden="true"
+              class="hidden h-6 border-l-2 border-base-6 sm:inline"
+            ></span>
+            <span>
+              <i class="i-lucide-languages"></i>
+              <select
+                id="lang"
+                class="rounded border border-base-4 bg-base-2 px-1 py-0.5"
+              >
+                
+                  
+                    <option value="de">Deutsch</option>
+                  
+                
+                  
+                    <option value="en">English</option>
+                  
+                
+                  
+                    <option value="es">Español</option>
+                  
+                
+                  
+                    <option value="fr" selected>
+                      Français
+                    </option>
+                  
+                
+                  
+                    <option value="ru">Русский</option>
+                  
+                
+              </select>
+            </span>
+            <span
+              aria-hidden="true"
+              class="h-6 border-l-2 border-base-6"
+            ></span>
+            <a href="about.html" class="link">À propos</a>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div id="toasts" hx-preserve="true" class="fixed right-0 top-0 m-2">
+      
+    </div>
+  </body>
+</html>

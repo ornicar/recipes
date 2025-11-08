@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
     <!-- Icons -->
-    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
-    <link rel="icon" type="image/png" href="favicon.png" />
+    <link rel="icon" type="image/svg+xml" href="../favicon.svg" />
+    <link rel="icon" type="image/png" href="../favicon.png" />
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -18,23 +18,23 @@
     />
 
     <!-- CSS -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="../styles.css" />
 
     <!-- Javascript dependencies -->
-    <script defer src="vendor/htmx.min.js"></script>
-    <script defer src="vendor/htmx-ext/json-enc.js"></script>
-    <script defer src="vendor/floating-ui.core.umd.min.js"></script>
-    <script defer src="vendor/floating-ui.dom.umd.min.js"></script>
-    <script defer src="vendor/twemoji.min.js"></script>
+    <script defer src="../vendor/htmx.min.js"></script>
+    <script defer src="../vendor/htmx-ext/json-enc.js"></script>
+    <script defer src="../vendor/floating-ui.core.umd.min.js"></script>
+    <script defer src="../vendor/floating-ui.dom.umd.min.js"></script>
+    <script defer src="../vendor/twemoji.min.js"></script>
 
     <!-- Custom javascript -->
     <script>
       const currentLocale = "fr";
     </script>
-    <script src="js/critical-theme.js"></script>
-    <script defer src="js/main.js"></script>
-    <script defer src="js/hot-reload.js"></script>
-    <script defer src="js/timer.js"></script>
+    <script src="../js/critical-theme.js"></script>
+    <script defer src="../js/main.js"></script>
+    <script defer src="../js/hot-reload.js"></script>
+    <script defer src="../js/timer.js"></script>
 
     <title>La tambouille</title>
     
@@ -53,7 +53,7 @@
         <nav class="mx-auto flex max-w-screen-xl items-center px-4 py-2">
           <div class="flex-1">
             <a
-              href="index.html"
+              href="../index.html"
               class="inline-flex h-12 flex-grow-0 items-center rounded px-4 font-heading text-xl font-bold text-primary-12 hover:bg-base-4"
               hx-boost="false"
               >La tambouille</a
@@ -132,9 +132,13 @@
   <div id="content">
     <!-- breadcrum -->
     <div class="m-4">
-      <a href="index.html" class="link"><i class="i-lucide-folder"></i></a>
+      <a href="../index.html" class="link"><i class="i-lucide-folder"></i></a>
       <span class="m-1 font-mono font-bold text-base-11">/</span>
       
+        
+          
+          <a href="Entrée.html" class="link font-mono">Entrée</a>
+          
         
       
     </div>
@@ -142,57 +146,7 @@
     <!-- folders -->
     <div class="flex flex-col flex-wrap gap-6 sm:flex-row">
       
-        <a
-          href="d/Apéro.html"
-          class="transition-border-color md:h-30 block h-20 rounded-xl border-2 border-transparent bg-base-3 shadow-md hover:border-primary-9 hover:bg-base-4 md:min-w-40"
-        >
-          <div class="flex h-full items-center justify-center p-2 md:flex-col">
-            <i class="i-lucide-folder text-2xl text-primary-9"></i>
-            <div>
-              <h2 class="px-4 font-heading text-xl">Apéro</h2>
-            </div>
-          </div>
-        </a>
-      
-        <a
-          href="d/Entrée.html"
-          class="transition-border-color md:h-30 block h-20 rounded-xl border-2 border-transparent bg-base-3 shadow-md hover:border-primary-9 hover:bg-base-4 md:min-w-40"
-        >
-          <div class="flex h-full items-center justify-center p-2 md:flex-col">
-            <i class="i-lucide-folder text-2xl text-primary-9"></i>
-            <div>
-              <h2 class="px-4 font-heading text-xl">Entrée</h2>
-            </div>
-          </div>
-        </a>
-      
-        <a
-          href="d/Plat.html"
-          class="transition-border-color md:h-30 block h-20 rounded-xl border-2 border-transparent bg-base-3 shadow-md hover:border-primary-9 hover:bg-base-4 md:min-w-40"
-        >
-          <div class="flex h-full items-center justify-center p-2 md:flex-col">
-            <i class="i-lucide-folder text-2xl text-primary-9"></i>
-            <div>
-              <h2 class="px-4 font-heading text-xl">Plat</h2>
-            </div>
-          </div>
-        </a>
-      
-        <a
-          href="d/Préparation.html"
-          class="transition-border-color md:h-30 block h-20 rounded-xl border-2 border-transparent bg-base-3 shadow-md hover:border-primary-9 hover:bg-base-4 md:min-w-40"
-        >
-          <div class="flex h-full items-center justify-center p-2 md:flex-col">
-            <i class="i-lucide-folder text-2xl text-primary-9"></i>
-            <div>
-              <h2 class="px-4 font-heading text-xl">Préparation</h2>
-            </div>
-          </div>
-        </a>
-      
     </div>
-    
-      <div class="divider m-4"></div>
     
     
 
@@ -202,6 +156,102 @@
   class="grid grid-cols-1 items-stretch justify-items-stretch gap-6 lg:grid-cols-2 2xl:grid-cols-3"
   id="recipe-grid"
 >
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+            <a href="../r/Entrée/Pâté%20de%20lentilles%20et%20champignons.html" class="flex-1 self-stretch md:relative">
+              <figure
+                class="inset-0 h-full max-h-52 overflow-hidden border-b-4 border-primary-9 md:absolute md:max-h-none md:border-b-0 md:border-r-4"
+              >
+                <img
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform hover:scale-[1.01]"
+                  src="../src/Entrée/Pâté%20de%20lentilles%20et%20champignons.jpeg"
+                  alt="Pâté de lentilles et champignons"
+                />
+              </figure>
+            </a>
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Entrée/Pâté%20de%20lentilles%20et%20champignons.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Pâté de lentilles et champignons
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Entrée/Pâté%20de%20lentilles%20et%20champignons.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
+  
+    <div>
+      <article
+        class="block min-w-52 overflow-hidden rounded-xl border-2 border-transparent bg-base-3 shadow-md transition-colors hover:border-primary-9 hover:bg-base-4"
+      >
+        <div class="flex flex-col md:min-h-52 md:flex-row">
+          
+            <a href="../r/Entrée/Salade%20de%20concombre%20écrasé.html" class="flex-1 self-stretch md:relative">
+              <figure
+                class="inset-0 h-full max-h-52 overflow-hidden border-b-4 border-primary-9 md:absolute md:max-h-none md:border-b-0 md:border-r-4"
+              >
+                <img
+                  loading="lazy"
+                  class="h-full w-full object-cover transition-transform hover:scale-[1.01]"
+                  src="../src/Entrée/Salade%20de%20concombre%20écrasé.jpg"
+                  alt="Salade de concombre écrasé (Yang Liu)"
+                />
+              </figure>
+            </a>
+          
+          <div class="flex flex-1 flex-col overflow-auto p-4">
+            <a href="../r/Entrée/Salade%20de%20concombre%20écrasé.html" class="block">
+              <h2 class="-mx-2 inline-block px-2 font-heading text-2xl">
+                Salade de concombre écrasé (Yang Liu)
+              </h2>
+            </a>
+            
+              <div class="divider mb-4 mt-2 px-1"></div>
+            
+
+            
+
+            
+
+            
+              <a
+                href="../r/Entrée/Salade%20de%20concombre%20écrasé.html"
+                class="grid grow place-items-center text-3xl text-base-6"
+              >
+                <i class="i-lucide-chef-hat"></i>
+              </a>
+            
+
+            
+          </div>
+        </div>
+      </article>
+    </div>
   
 </div>
 <div class="mx-auto">
@@ -220,7 +270,7 @@
       <!-- Timer, hidden by default -->
       <audio
         id="timer-audio"
-        src="mixkit-alarm-tone-996.wav"
+        src="../mixkit-alarm-tone-996.wav"
         preload="none"
       ></audio>
       <div
@@ -312,7 +362,7 @@
               aria-hidden="true"
               class="h-6 border-l-2 border-base-6"
             ></span>
-            <a href="about.html" class="link">À propos</a>
+            <a href="../about.html" class="link">À propos</a>
           </footer>
         </div>
       </div>

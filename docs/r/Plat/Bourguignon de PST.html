@@ -1,0 +1,2767 @@
+<!doctype html>
+<html lang="fr" dir="ltr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Icons -->
+    <link rel="icon" type="image/svg+xml" href="../../favicon.svg" />
+    <link rel="icon" type="image/png" href="../../favicon.png" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital@0;1&family=Noto+Sans:ital,wght@0,400;0,600;1,400;1,600&family=Noto+Serif:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../../styles.css" />
+
+    <!-- Javascript dependencies -->
+    <script defer src="../../vendor/htmx.min.js"></script>
+    <script defer src="../../vendor/htmx-ext/json-enc.js"></script>
+    <script defer src="../../vendor/floating-ui.core.umd.min.js"></script>
+    <script defer src="../../vendor/floating-ui.dom.umd.min.js"></script>
+    <script defer src="../../vendor/twemoji.min.js"></script>
+
+    <!-- Custom javascript -->
+    <script>
+      const currentLocale = "fr";
+    </script>
+    <script src="../../js/critical-theme.js"></script>
+    <script defer src="../../js/main.js"></script>
+    <script defer src="../../js/hot-reload.js"></script>
+    <script defer src="../../js/timer.js"></script>
+
+    <title>Bourguignon de PST - La tambouille</title>
+    
+  </head>
+  <body hx-boost="true">
+    <!-- dummy element to trigger hot reload events -->
+    <div
+      id="hot-reload-target"
+      hx-get="/"
+      hx-trigger="hot-reload"
+      hx-target="#content"
+      hx-select="#content"
+    ></div>
+    <div class="flex min-h-screen flex-col">
+      <header hx-preserve id="header">
+        <nav class="mx-auto flex max-w-screen-xl items-center px-4 py-2">
+          <div class="flex-1">
+            <a
+              href="../../index.html"
+              class="inline-flex h-12 flex-grow-0 items-center rounded px-4 font-heading text-xl font-bold text-primary-12 hover:bg-base-4"
+              hx-boost="false"
+              >La tambouille</a
+            >
+          </div>
+
+          <div class="relative size-12">
+            <div class="absolute inset-0 grid place-items-center">
+              <div
+                id="hot-reload-indicator"
+                class="mx-4 block size-4 rounded-full border-2 transition-colors"
+              ></div>
+            </div>
+            <div
+              id="hot-reload-tooltip"
+              class="absolute inset-0 mx-2"
+              data-tooltip="Mise à jour automatique du contenu"
+              data-tooltip-alt="Aucune mise à jour automatique disponible. Rechargez pour réessayer."
+            ></div>
+          </div>
+
+          <div>
+            <button
+              theme-btn
+              id="theme-toggle-button"
+              class="btn m-1 inline-grid size-9 place-items-center text-xl text-green-11 hover:bg-green-4 dark:text-indigo-11 dark:hover:bg-indigo-4"
+            >
+              <i class="i-lucide-sun dark:i-lucide-moon"></i>
+              <span class="sr-only">Thème</span>
+            </button>
+          </div>
+        </nav>
+        <div class="divider border-dashed px-4 text-2xl sm:px-10">
+          <span class="i-lucide-chef-hat"></span>
+        </div>
+      </header>
+
+      <main
+        class="lg:max-w-screen-lg container mx-auto my-10 flex-grow px-3"
+      >
+        
+  <div id="content">
+    
+      
+
+<!-- Image(s) -->
+
+  <div class="mb-8 max-h-[70vh] w-full overflow-hidden rounded shadow-lg">
+    <img class="h-full w-full object-cover" src="../../src/Plat/Bourguignon%20de%20PST.png" />
+  </div>
+
+
+<!-- Warnings -->
+
+
+
+
+<!-- Title -->
+<h1 class="font-heading text-6xl">
+  
+  Bourguignon de PST
+</h1>
+
+<!-- Metadata -->
+<div class="m-4 flex flex-wrap gap-2">
+  
+</div>
+
+
+
+
+
+
+
+
+
+  <div
+    class="my-3 flex w-fit flex-wrap items-center justify-start gap-2 rounded-xl border border-dashed border-base-6 p-2"
+  >
+    <div
+      class="dark:inset-shadow grid size-10 place-items-center rounded-full border-2 border-primary-8 bg-primary-3 text-base-12"
+    >
+      <i class="i-lucide-utensils text-primary-12"></i>
+    </div>
+    
+  
+  <div
+    class="flex items-stretch justify-center overflow-hidden rounded border border-base-6"
+  >
+    <div
+      class="whitespace-nowrap border-r-2 border-primary-9 bg-primary-3 px-4 py-2 font-semibold"
+    >
+      Portions
+    </div>
+    <div class="flex h-10 items-stretch justify-center bg-base-3 px-4 py-2">
+      
+    <form
+      class="px-2"
+      method="get"
+      action="Bourguignon%20de%20PST.html"
+      hx-trigger="input[target.value.length>0] changed delay:500ms from:#custom-scale, submit"
+      hx-swap="show:none"
+    >
+      
+      <input
+        id="custom-scale"
+        name="scale"
+        value="5"
+        class="-my-0.5 h-7 w-14 rounded border border-base-2 p-1 tabular-nums"
+        type="number"
+        min="1"
+        max="99"
+        inputmode="numeric"
+        pattern="[0-9]*"
+      />
+    </form>
+    
+      <div class="flex divide-x-2 divide-base-7">
+        
+          
+          
+          <div class="px-2">
+            <a
+              href="Bourguignon%20de%20PST.html"
+              class="border-primary-7
+                    h-fit rounded border-2 px-1.5 decoration-2"
+              hx-swap="show:none"
+            >
+              5
+            </a>
+          </div>
+        
+      </div>
+    
+  
+    </div>
+  </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+<details remember-open id="recipe-more-metadata">
+  <summary class="w-fit text-primary-12">Plus d&#x27;infos</summary>
+
+  
+
+  
+  <div
+    class="my-3 flex w-fit flex-wrap items-center justify-start gap-2 rounded-xl border border-dashed border-base-6 p-2"
+  >
+    <div
+      class="dark:inset-shadow grid size-10 place-items-center rounded-full border-2 border-primary-8 bg-primary-3 text-base-12"
+    >
+      <i class="i-lucide-calendar text-primary-12"></i>
+    </div>
+    
+    
+  <div
+    class="flex items-stretch justify-center overflow-hidden rounded border border-base-6"
+  >
+    <div
+      class="whitespace-nowrap border-r-2 border-primary-9 bg-primary-3 px-4 py-2 font-semibold"
+    >
+      Ajoutée
+    </div>
+    <div class="flex h-10 items-stretch justify-center bg-base-3 px-4 py-2">
+      
+      <span format-timestamp>1755698438</span>
+    
+    </div>
+  </div>
+
+    
+  <div
+    class="flex items-stretch justify-center overflow-hidden rounded border border-base-6"
+  >
+    <div
+      class="whitespace-nowrap border-r-2 border-primary-9 bg-primary-3 px-4 py-2 font-semibold"
+    >
+      Modifiée
+    </div>
+    <div class="flex h-10 items-stretch justify-center bg-base-3 px-4 py-2">
+      
+      <span format-timestamp>1761568643</span>
+    
+    </div>
+  </div>
+
+  
+  </div>
+
+
+  
+
+  
+  <div
+    class="my-3 flex w-fit flex-wrap items-center justify-start gap-2 rounded-xl border border-dashed border-base-6 p-2"
+  >
+    <div
+      class="dark:inset-shadow grid size-10 place-items-center rounded-full border-2 border-primary-8 bg-primary-3 text-base-12"
+    >
+      <i class="i-lucide-code text-primary-12"></i>
+    </div>
+    
+    
+  <div
+    class="flex items-stretch justify-center overflow-hidden rounded border border-base-6"
+  >
+    <div
+      class="whitespace-nowrap border-r-2 border-primary-9 bg-primary-3 px-4 py-2 font-semibold"
+    >
+      Fichier source
+    </div>
+    <div class="flex h-10 items-stretch justify-center bg-base-3 px-4 py-2">
+      
+      <span
+        class="dark -my-1 rounded bg-base-1 px-4 py-1 font-mono text-base-12"
+      >
+        Plat&#x2f;Bourguignon de PST.cook
+      </span>
+      <a
+        href="../../src/Plat/Bourguignon%20de%20PST.cook"
+        class="btn btn-primary -my-1 ms-4 inline-grid size-8 place-items-center"
+        target="_blank"
+        ><i class="i-lucide-file-code"></i
+      ></a>
+    
+    </div>
+  </div>
+
+  
+  </div>
+
+</details>
+
+
+
+<!-- Controls -->
+<form
+  class="float-right my-2"
+  method="get"
+  action="Bourguignon%20de%20PST.html"
+  hx-trigger="input changed from:#units, submit"
+  hx-swap="show:none"
+>
+  
+  <span>
+    <i class="i-lucide-ruler me-1 text-primary-11"></i>
+    <label for="units" class="sr-only">
+      Convertir les unités
+    </label>
+    <select
+      id="units"
+      name="units"
+      class="rounded border border-base-4 bg-base-2 px-1 py-0.5"
+    >
+      
+        
+        <option value="default" selected>
+          Défaut
+        </option>
+      
+        
+        <option value="metric" >
+          Métrique
+        </option>
+      
+        
+        <option value="imperial" >
+          Impérial
+        </option>
+      
+    </select>
+  </span>
+</form>
+
+<!-- Recipe content -->
+<div
+  class="content font-serif text-lg"
+  data-igr-layout="line"
+>
+  <!-- Lists -->
+  <div class="md:grid md:grid-cols-2">
+    
+      <div>
+        <h2 class="my-2 font-heading text-3xl">Ingrédients</h2>
+        <ul class="ms-6 list-disc">
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="0"
+                  data-component-ref-target="ingredient"
+                >
+                  Médaillons de pst</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"g","value":{"type":"number","value":{"type":"regular","value":150.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>150</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">g</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="1"
+                  data-component-ref-target="ingredient"
+                >
+                  Eau</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"ml","value":{"type":"number","value":{"type":"regular","value":500.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>500</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">ml</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="2"
+                  data-component-ref-target="ingredient"
+                >
+                  Vin rouge</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"verres","value":{"type":"number","value":{"type":"regular","value":2.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">verres</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="3"
+                  data-component-ref-target="ingredient"
+                >
+                  Miso</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="4"
+                  data-component-ref-target="ingredient"
+                >
+                  Bouillon cube</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+    
+  
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="5"
+                  data-component-ref-target="ingredient"
+                >
+                  Feuilles de laurier</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+    
+  
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="6"
+                  data-component-ref-target="ingredient"
+                >
+                  Ail en poudre</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":2.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="7"
+                  data-component-ref-target="ingredient"
+                >
+                  Oignons émincés</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+    
+  
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="8"
+                  data-component-ref-target="ingredient"
+                >
+                  Carottes en rondelles</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"g","value":{"type":"number","value":{"type":"regular","value":200.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>200</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">g</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="9"
+                  data-component-ref-target="ingredient"
+                >
+                  Huile d&#x27;olive</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":3.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>3</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="10"
+                  data-component-ref-target="ingredient"
+                >
+                  Champignons en quartiers</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"g","value":{"type":"number","value":{"type":"regular","value":500.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>500</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">g</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="11"
+                  data-component-ref-target="ingredient"
+                >
+                  Vin rouge</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"l","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">l</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="12"
+                  data-component-ref-target="ingredient"
+                >
+                  Cognac</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":2.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="13"
+                  data-component-ref-target="ingredient"
+                >
+                  Bouillon de légumes</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"ml","value":{"type":"number","value":{"type":"regular","value":200.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>200</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">ml</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="14"
+                  data-component-ref-target="ingredient"
+                >
+                  Sauce soja</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":4.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>4</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="15"
+                  data-component-ref-target="ingredient"
+                >
+                  Concentré de tomates</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":4.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>4</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="16"
+                  data-component-ref-target="ingredient"
+                >
+                  Sirop d’érable</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":2.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="17"
+                  data-component-ref-target="ingredient"
+                >
+                  Piment rouge en poudre</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"fraction","value":{"den":2,"err":0.0,"num":1,"whole":0}}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    
+    
+      ½
+      
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="18"
+                  data-component-ref-target="ingredient"
+                >
+                  Feuilles de laurier</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+    
+  
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>5</span>
+  </span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="19"
+                  data-component-ref-target="ingredient"
+                >
+                  Thym ou origan</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="20"
+                  data-component-ref-target="ingredient"
+                >
+                  Poivre en grains</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":2.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="21"
+                  data-component-ref-target="ingredient"
+                >
+                  Poivre moulu</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":0.5}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>0.5</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="22"
+                  data-component-ref-target="ingredient"
+                >
+                  Baies roses</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="23"
+                  data-component-ref-target="ingredient"
+                >
+                  Pommes de terre</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"g","value":{"type":"number","value":{"type":"regular","value":800.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>800</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">g</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="24"
+                  data-component-ref-target="ingredient"
+                >
+                  Fécule de maïs</span><span> (opt)</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+        </ul>
+      </div>
+    
+    
+      <div>
+        <h2 class="my-2 font-heading text-3xl">Matériel</h2>
+        <ul class="ms-6 list-disc">
+          
+            
+            
+              <li class="w-fit">
+                <span
+                  data-component-kind="cookware"
+                  data-component-ref-group="0"
+                  data-component-ref-target="cookware"
+                >Casserole</span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                <span
+                  data-component-kind="cookware"
+                  data-component-ref-group="1"
+                  data-component-ref-target="cookware"
+                >Presse-purée</span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                <span
+                  data-component-kind="cookware"
+                  data-component-ref-group="2"
+                  data-component-ref-target="cookware"
+                >Marmite</span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                <span
+                  data-component-kind="cookware"
+                  data-component-ref-group="3"
+                  data-component-ref-target="cookware"
+                >Cuiseur vapeur</span>
+              </li>
+            
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+    <div class="float-right flex gap-2">
+      <button
+        id="igr-layout-line"
+        type="button"
+        class="btn btn-primary mt-6 grid size-9 place-items-center border-2 border-transparent"
+      >
+        <i class="i-lucide-wrap-text"></i>
+        <span class="sr-only">Compacte</span>
+      </button>
+      <button
+        id="igr-layout-list"
+        type="button"
+        class="btn btn-primary mt-6 grid size-9 place-items-center border-2 border-transparent"
+      >
+        <i class="i-lucide-layout-list"></i>
+        <span class="sr-only">Liste</span>
+      </button>
+      <button
+        id="igr-layout-hidden"
+        type="button"
+        class="btn btn-primary mt-6 grid size-9 place-items-center border-2 border-transparent"
+      >
+        <i class="i-lucide-eye-off"></i>
+        <span class="sr-only">Cachée</span>
+      </button>
+    </div>
+
+    <h2 class="mb-2 mt-6 font-heading text-3xl">Méthode</h2>
+  
+  <!-- Sections -->
+  
+    
+    
+    <div
+      class="bg-transparent transition-colors"
+      data-section-index="0"
+      id="section-0"
+    >
+      <h2 class="my-3 font-heading text-2xl">
+        
+          PST
+        
+      </h2>
+
+      <!-- Section content -->
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              1.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="0"
+                id="step-0-0"
+              >
+                <p class="grow">
+                  Dans une 
+                      <span
+                        class="font-semibold text-yellow-11"
+                        data-component-kind="cookware"
+                        data-component-ref-group="0"
+                        data-component-ref-target="cookware"
+                      >casserole</span>, recouvrir les 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="0"
+                        data-component-ref-target="ingredient"
+                      >médaillons de PST</span> d&#x27;
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="1"
+                        data-component-ref-target="ingredient"
+                      >eau</span>, 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="2"
+                        data-component-ref-target="ingredient"
+                      >vin rouge</span>, 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="3"
+                        data-component-ref-target="ingredient"
+                      >miso</span>, 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="4"
+                        data-component-ref-target="ingredient"
+                      >bouillon cube</span>, 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="5"
+                        data-component-ref-target="ingredient"
+                      >feuilles de laurier</span> et 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="6"
+                        data-component-ref-target="ingredient"
+                      >ail en poudre</span>.
+                </p>
+
+                <!-- Ingredients line -->
+                
+                  <div class="divider igr-line-divider my-4"></div>
+                  <ul class="igr-line">
+                    <li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="0"
+                            data-component-ref-target="ingredient"
+                          >médaillons de PST</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"g","value":{"type":"number","value":{"type":"regular","value":150.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>150</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">g</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="1"
+                            data-component-ref-target="ingredient"
+                          >eau</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cl","value":{"type":"number","value":{"type":"regular","value":50.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>50</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cl</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="2"
+                            data-component-ref-target="ingredient"
+                          >vin rouge</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"verres","value":{"type":"number","value":{"type":"regular","value":2.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">verres</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="3"
+                            data-component-ref-target="ingredient"
+                          >miso</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="4"
+                            data-component-ref-target="ingredient"
+                          >bouillon cube</span>:
+                            <span class="text-base-11">
+                              
+    
+  
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="5"
+                            data-component-ref-target="ingredient"
+                          >feuilles de laurier</span>:
+                            <span class="text-base-11">
+                              
+    
+  
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="6"
+                            data-component-ref-target="ingredient"
+                          >ail en poudre</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":2.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                            </span>
+                          
+                        </li>
+                  </ul>
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              2.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="1"
+                id="step-0-1"
+              >
+                <p class="grow">
+                  Porter à ébullition, puis laisser à feu doux le temps de la réhydratation.
+                </p>
+
+                <!-- Ingredients line -->
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              3.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="2"
+                id="step-0-2"
+              >
+                <p class="grow">
+                  Sortir les médaillons et les essorer délicatement dans une passoire à l’aide d’un 
+                      <span
+                        class="font-semibold text-yellow-11"
+                        data-component-kind="cookware"
+                        data-component-ref-group="1"
+                        data-component-ref-target="cookware"
+                      >presse-purée</span> ou d&#x27;une fourchette.
+                </p>
+
+                <!-- Ingredients line -->
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+    </div>
+  
+    
+      <div class="divider mx-2 my-8"></div>
+    
+    
+    <div
+      class="bg-transparent transition-colors"
+      data-section-index="1"
+      id="section-1"
+    >
+      <h2 class="my-3 font-heading text-2xl">
+        
+          Bourguignon
+        
+      </h2>
+
+      <!-- Section content -->
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              1.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="0"
+                id="step-1-0"
+              >
+                <p class="grow">
+                  Dans une 
+                      <span
+                        class="font-semibold text-yellow-11"
+                        data-component-kind="cookware"
+                        data-component-ref-group="2"
+                        data-component-ref-target="cookware"
+                      >marmite</span>, faire revenir les 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="7"
+                        data-component-ref-target="ingredient"
+                      >oignons émincés</span> et les 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="8"
+                        data-component-ref-target="ingredient"
+                      >carottes en rondelles</span> dans l’
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="9"
+                        data-component-ref-target="ingredient"
+                      >huile d&#x27;olive</span> 
+                      
+                      
+                        <button
+                          class="inline font-semibold text-indigo-11 disabled:cursor-not-allowed"
+                          data-tooltip="Démarrer le minuteur"
+                          data-timer="300.0"
+                          data-timer-name="false"
+                        >
+                          
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>5</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">minutes</span>
+    
+  </span></button>
+                       en mélangeant régulièrement.
+                </p>
+
+                <!-- Ingredients line -->
+                
+                  <div class="divider igr-line-divider my-4"></div>
+                  <ul class="igr-line">
+                    <li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="7"
+                            data-component-ref-target="ingredient"
+                          >oignons émincés</span>:
+                            <span class="text-base-11">
+                              
+    
+  
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="8"
+                            data-component-ref-target="ingredient"
+                          >carottes en rondelles</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"g","value":{"type":"number","value":{"type":"regular","value":200.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>200</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">g</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="9"
+                            data-component-ref-target="ingredient"
+                          >huile d&#x27;olive</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":3.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>3</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                            </span>
+                          
+                        </li>
+                  </ul>
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              2.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="1"
+                id="step-1-1"
+              >
+                <p class="grow">
+                  Ajouter les 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="10"
+                        data-component-ref-target="ingredient"
+                      >champignons en quartiers</span> et les faire réduire.
+                </p>
+
+                <!-- Ingredients line -->
+                
+                  <div class="divider igr-line-divider my-4"></div>
+                  <ul class="igr-line">
+                    <li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="10"
+                            data-component-ref-target="ingredient"
+                          >champignons en quartiers</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"g","value":{"type":"number","value":{"type":"regular","value":500.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>500</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">g</span>
+    
+  </span>
+                            </span>
+                          
+                        </li>
+                  </ul>
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              3.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="2"
+                id="step-1-2"
+              >
+                <p class="grow">
+                  Ajouter les médaillons de PST et poursuivre la cuisson 
+                      
+                      
+                        <button
+                          class="inline font-semibold text-indigo-11 disabled:cursor-not-allowed"
+                          data-tooltip="Démarrer le minuteur"
+                          data-timer="300.0"
+                          data-timer-name="false"
+                        >
+                          
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>5</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">minutes</span>
+    
+  </span></button>
+                      . Bien mélanger.
+                </p>
+
+                <!-- Ingredients line -->
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              4.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="3"
+                id="step-1-3"
+              >
+                <p class="grow">
+                  Ajouter le 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="11"
+                        data-component-ref-target="ingredient"
+                      >vin rouge</span>, porter à ébullition et laisser mijoter 
+                      
+                      
+                        <button
+                          class="inline font-semibold text-indigo-11 disabled:cursor-not-allowed"
+                          data-tooltip="Démarrer le minuteur"
+                          data-timer="180.0"
+                          data-timer-name="false"
+                        >
+                          
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>3</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">minutes</span>
+    
+  </span></button>
+                      . 
+                </p>
+
+                <!-- Ingredients line -->
+                
+                  <div class="divider igr-line-divider my-4"></div>
+                  <ul class="igr-line">
+                    <li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="11"
+                            data-component-ref-target="ingredient"
+                          >vin rouge</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"l","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">l</span>
+    
+  </span>
+                            </span>
+                          
+                        </li>
+                  </ul>
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              5.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="4"
+                id="step-1-4"
+              >
+                <p class="grow">
+                  Flamber le 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="12"
+                        data-component-ref-target="ingredient"
+                      >Cognac</span> et l’ajouter. 
+                </p>
+
+                <!-- Ingredients line -->
+                
+                  <div class="divider igr-line-divider my-4"></div>
+                  <ul class="igr-line">
+                    <li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="12"
+                            data-component-ref-target="ingredient"
+                          >Cognac</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":2.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                            </span>
+                          
+                        </li>
+                  </ul>
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              6.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="5"
+                id="step-1-5"
+              >
+                <p class="grow">
+                  Ajouter le 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="13"
+                        data-component-ref-target="ingredient"
+                      >bouillon de légumes</span>, la 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="14"
+                        data-component-ref-target="ingredient"
+                      >sauce soja</span>, le 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="15"
+                        data-component-ref-target="ingredient"
+                      >concentré de tomates</span>, le 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="16"
+                        data-component-ref-target="ingredient"
+                      >sirop d’érable</span>, le 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="17"
+                        data-component-ref-target="ingredient"
+                      >piment rouge en poudre</span>, les 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="18"
+                        data-component-ref-target="ingredient"
+                      >feuilles de laurier</span>, le 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="19"
+                        data-component-ref-target="ingredient"
+                      >thym ou origan</span>, le 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="20"
+                        data-component-ref-target="ingredient"
+                      >poivre en grains</span> et 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="21"
+                        data-component-ref-target="ingredient"
+                      >poivre moulu</span>, les 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="22"
+                        data-component-ref-target="ingredient"
+                      >baies roses</span>.
+                </p>
+
+                <!-- Ingredients line -->
+                
+                  <div class="divider igr-line-divider my-4"></div>
+                  <ul class="igr-line">
+                    <li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="13"
+                            data-component-ref-target="ingredient"
+                          >bouillon de légumes</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cl","value":{"type":"number","value":{"type":"regular","value":20.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>20</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cl</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="14"
+                            data-component-ref-target="ingredient"
+                          >sauce soja</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":4.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>4</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="15"
+                            data-component-ref-target="ingredient"
+                          >concentré de tomates</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":4.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>4</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="16"
+                            data-component-ref-target="ingredient"
+                          >sirop d’érable</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":2.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="17"
+                            data-component-ref-target="ingredient"
+                          >piment rouge en poudre</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"fraction","value":{"den":2,"err":0.0,"num":1,"whole":0}}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    
+    
+      ½
+      
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="18"
+                            data-component-ref-target="ingredient"
+                          >feuilles de laurier</span>:
+                            <span class="text-base-11">
+                              
+    
+  
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>5</span>
+  </span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="19"
+                            data-component-ref-target="ingredient"
+                          >thym ou origan</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="20"
+                            data-component-ref-target="ingredient"
+                          >poivre en grains</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":2.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="21"
+                            data-component-ref-target="ingredient"
+                          >poivre moulu</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":0.5}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>0.5</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="22"
+                            data-component-ref-target="ingredient"
+                          >baies roses</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                            </span>
+                          
+                        </li>
+                  </ul>
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              7.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="6"
+                id="step-1-6"
+              >
+                <p class="grow">
+                  Porter à ébullition, réduire le feu et laisser mijoter 
+                      
+                      
+                        <button
+                          class="inline font-semibold text-indigo-11 disabled:cursor-not-allowed"
+                          data-tooltip="Démarrer le minuteur"
+                          data-timer="1800.0"
+                          data-timer-name="false"
+                        >
+                          
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>30</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">minutes</span>
+    
+  </span></button>
+                      .
+                </p>
+
+                <!-- Ingredients line -->
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              8.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="7"
+                id="step-1-7"
+              >
+                <p class="grow">
+                  Cuire des 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="23"
+                        data-component-ref-target="ingredient"
+                      >pommes de terre</span> dans un 
+                      <span
+                        class="font-semibold text-yellow-11"
+                        data-component-kind="cookware"
+                        data-component-ref-group="3"
+                        data-component-ref-target="cookware"
+                      >cuiseur vapeur</span> ou à l&#x27;eau salée jusqu&#x27;à ce qu&#x27;elles soient tendres. Réserver.
+                </p>
+
+                <!-- Ingredients line -->
+                
+                  <div class="divider igr-line-divider my-4"></div>
+                  <ul class="igr-line">
+                    <li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="23"
+                            data-component-ref-target="ingredient"
+                          >pommes de terre</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"g","value":{"type":"number","value":{"type":"regular","value":800.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>800</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">g</span>
+    
+  </span>
+                            </span>
+                          
+                        </li>
+                  </ul>
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              9.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="8"
+                id="step-1-8"
+              >
+                <p class="grow">
+                  Si besoin, ajouter la 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="24"
+                        data-component-ref-target="ingredient"
+                      >fécule de maïs</span>, préalablement diluée, en remuant constamment, porter à ébullition et retirer du feu aussitôt que la sauce à épaissi, après environ 
+                      
+                      
+                        <button
+                          class="inline font-semibold text-indigo-11 disabled:cursor-not-allowed"
+                          data-tooltip="Démarrer le minuteur"
+                          data-timer="60.0"
+                          data-timer-name="false"
+                        >
+                          
+  <span
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">minute</span>
+    
+  </span></button>
+                      .
+                </p>
+
+                <!-- Ingredients line -->
+                
+                  <div class="divider igr-line-divider my-4"></div>
+                  <ul class="igr-line">
+                    <li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="24"
+                            data-component-ref-target="ingredient"
+                          >fécule de maïs</span><span> (opt)</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                            </span>
+                          
+                        </li>
+                  </ul>
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+    </div>
+  
+</div>
+
+<script src="../../js/recipe.js" defer></script>
+    
+  </div>
+
+      </main>
+
+      <!-- Timer, hidden by default -->
+      <audio
+        id="timer-audio"
+        src="../../mixkit-alarm-tone-996.wav"
+        preload="none"
+      ></audio>
+      <div
+        id="timer"
+        hidden
+        class="sticky bottom-4 z-30 my-4 h-20 min-w-64 overflow-hidden rounded-xl bg-indigo-3 p-2 shadow shadow-indigo-1 md:bottom-8 md:mx-auto md:w-64"
+        hx-preserve="true"
+      >
+        <div
+          id="timer-name"
+          class="absolute left-0 right-0 top-1 text-center font-semibold capitalize text-indigo-11"
+        ></div>
+
+        <div
+          class="timer-grid h-full items-center justify-center space-x-1 text-2xl"
+        >
+          <div>
+            <button
+              id="timer-start-btn"
+              class="flex items-center justify-end text-primary-9"
+            >
+              <i class="i-lucide-play"></i>
+            </button>
+            <button
+              id="timer-pause-btn"
+              class="flex items-center justify-end text-primary-9"
+            >
+              <i class="i-lucide-pause"></i>
+            </button>
+          </div>
+
+          <div class="text-center">
+            <span
+              id="timer-text"
+              class="select-none text-4xl tabular-nums text-base-12"
+            >
+            </span>
+          </div>
+
+          <button
+            id="timer-remove-btn"
+            class="flex items-center justify-start text-red-9"
+          >
+            <i class="i-lucide-x"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="mt-auto" hx-preserve="true" id="footer">
+        <div class="divider my-10 border-dashed px-4 sm:px-10">
+          <footer class="space-x-2 px-3">
+            <a href="https://github.com/ornicar/recipes" class="link">Source</a>
+            <span
+              aria-hidden="true"
+              class="hidden h-6 border-l-2 border-base-6 sm:inline"
+            ></span>
+            <span>
+              <i class="i-lucide-languages"></i>
+              <select
+                id="lang"
+                class="rounded border border-base-4 bg-base-2 px-1 py-0.5"
+              >
+                
+                  
+                    <option value="de">Deutsch</option>
+                  
+                
+                  
+                    <option value="en">English</option>
+                  
+                
+                  
+                    <option value="es">Español</option>
+                  
+                
+                  
+                    <option value="fr" selected>
+                      Français
+                    </option>
+                  
+                
+                  
+                    <option value="ru">Русский</option>
+                  
+                
+              </select>
+            </span>
+            <span
+              aria-hidden="true"
+              class="h-6 border-l-2 border-base-6"
+            ></span>
+            <a href="../../about.html" class="link">À propos</a>
+          </footer>
+        </div>
+      </div>
+    </div>
+    <div id="toasts" hx-preserve="true" class="fixed right-0 top-0 m-2">
+      
+    </div>
+  </body>
+</html>
