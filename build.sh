@@ -5,6 +5,7 @@ host=recipes.local
 cd docs
 
 wget \
+  --continue \
   --recursive \
   --level 5 \
   --page-requisites \
