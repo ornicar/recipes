@@ -1,5 +1,7 @@
 #/bin/sh
 
+host=recipes.local
+
 cd docs
 
 wget \
@@ -8,9 +10,9 @@ wget \
   --page-requisites \
   --adjust-extension \
   --convert-links \
-  --domains chef.freeboxos.fr \
+  --domains recipes.local \
   --no-parent \
-  http://chef.freeboxos.fr
+  http://$host
 
-mv chef.freeboxos.fr/* ./
-rm -r chef.freeboxos.fr
+mv $host/* ./
+rm -r $host
