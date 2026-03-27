@@ -2,6 +2,8 @@
 
 host=recipes.local
 
+rm -rf docs/*
+
 cd docs
 
 wget \
