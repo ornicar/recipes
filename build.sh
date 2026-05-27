@@ -2,8 +2,12 @@
 
 host=recipes.local
 
-rm -rf docs/*
+pwd=$(pwd)
 
+# cd to script dir
+cd "$(dirname "$0")"
+
+rm -rf docs/*
 cd docs
 
 wget \
@@ -19,3 +23,6 @@ wget \
 
 mv $host/* ./
 rm -r $host
+
+# cd back to prev dir
+cd $pwd
