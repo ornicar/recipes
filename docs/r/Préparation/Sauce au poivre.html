@@ -32,21 +32,12 @@
     </script>
     <script src="../../js/critical-theme.js"></script>
     <script defer src="../../js/main.js"></script>
-    <script defer src="../../js/hot-reload.js"></script>
     <script defer src="../../js/timer.js"></script>
 
     <title>Sauce au poivre - La tambouille</title>
     
   </head>
   <body hx-boost="true">
-    <!-- dummy element to trigger hot reload events -->
-    <div
-      id="hot-reload-target"
-      hx-get="/"
-      hx-trigger="hot-reload"
-      hx-target="#content"
-      hx-select="#content"
-    ></div>
     <div class="flex min-h-screen flex-col">
       <header id="header">
         <nav class="mx-auto flex max-w-screen-xl items-center px-4 py-2">
@@ -149,26 +140,6 @@
     </div>
     <div class="flex h-10 items-stretch justify-center bg-base-3 px-4 py-2">
       
-    <form
-      class="px-2"
-      method="get"
-      action="Sauce%20au%20poivre.html"
-      hx-trigger="input[target.value.length>0] changed delay:500ms from:#custom-scale, submit"
-      hx-swap="show:none"
-    >
-      
-      <input
-        id="custom-scale"
-        name="scale"
-        value="4"
-        class="-my-0.5 h-7 w-14 rounded border border-base-2 p-1 tabular-nums"
-        type="number"
-        min="1"
-        max="99"
-        inputmode="numeric"
-        pattern="[0-9]*"
-      />
-    </form>
     
       <div class="flex divide-x-2 divide-base-7">
         
