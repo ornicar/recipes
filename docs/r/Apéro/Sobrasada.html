@@ -87,33 +87,843 @@
         
   <div id="content">
     
-      <h1 class="text-2xl text-red-9">Erreur de lecture de la recette</h1>
       
 
-<div class="bg-red-3 border-red-6 m-2 rounded-xl border">
-  <div class="m-3 flex justify-end gap-2">
-    <a
-      href="../../src/Apéro/Sobrasada.cook"
-      target="_blank"
-      class="btn btn-primary btn-icon"
-      hx-boost="false"
-    >
-      <i class="i-lucide-file-code"></i>
-      Fichier source
-    </a>
+<!-- Image(s) -->
+
+  <div class="mb-8 max-h-[70vh] w-full overflow-hidden rounded shadow-lg">
+    <img class="h-full w-full object-cover" src="../../src/Apéro/Sobrasada.jpg" />
   </div>
-  <pre
-    class="border-red-6 dark m-4 whitespace-pre-wrap rounded border bg-base-3 p-2 font-mono leading-[normal] text-base-12 dark:bg-base-1"
-  ><span style='color:var(--red,#a00)'>Error:</span> Invalid ingredient name: is empty
-  ╭─<span style='opacity:0.67'>[</span>Sobrasada.cook<span style='opacity:0.67'>]</span>
-  │
-5 │ Egouter des tomates séchées @{200*%g}.
-  ┆                              <span style='color:var(--bright-magenta,#f5f)'>┬</span>        
-  ┆                              <span style='color:var(--bright-magenta,#f5f)'>│</span>        
-  ┆                              <span style='color:var(--bright-magenta,#f5f)'>╰─────────</span> add a name here
-──╯
-</pre>
+
+
+<!-- Warnings -->
+
+
+
+
+<!-- Title -->
+<h1 class="font-heading text-6xl">
+  
+  Sobrasada
+</h1>
+
+<!-- Metadata -->
+<div class="m-4 flex flex-wrap gap-2">
+  
 </div>
+
+
+
+
+
+
+
+
+
+  <div
+    class="my-3 flex w-fit flex-wrap items-center justify-start gap-2 rounded-xl border border-dashed border-base-6 p-2"
+  >
+    <div
+      class="dark:inset-shadow grid size-10 place-items-center rounded-full border-2 border-primary-8 bg-primary-3 text-base-12"
+    >
+      <i class="i-lucide-utensils text-primary-12"></i>
+    </div>
+    
+  
+  <div
+    class="flex items-stretch justify-center overflow-hidden rounded border border-base-6"
+  >
+    <div
+      class="whitespace-nowrap border-r-2 border-primary-9 bg-primary-3 px-4 py-2 font-semibold"
+    >
+      Portions
+    </div>
+    <div class="flex h-10 items-stretch justify-center bg-base-3 px-4 py-2">
+      
+    
+      <div class="flex divide-x-2 divide-base-7">
+        
+          
+          
+          <div class="px-2">
+            <a
+              href="Sobrasada.html"
+              class="border-primary-7
+                    h-fit rounded border-2 px-1.5 decoration-2"
+              hx-swap="show:none"
+            >
+              3
+            </a>
+          </div>
+        
+      </div>
+    
+  
+    </div>
+  </div>
+
+
+  </div>
+
+
+
+
+
+
+
+
+<details remember-open id="recipe-more-metadata">
+  <summary class="w-fit text-primary-12">Plus d&#x27;infos</summary>
+
+  
+
+  
+  <div
+    class="my-3 flex w-fit flex-wrap items-center justify-start gap-2 rounded-xl border border-dashed border-base-6 p-2"
+  >
+    <div
+      class="dark:inset-shadow grid size-10 place-items-center rounded-full border-2 border-primary-8 bg-primary-3 text-base-12"
+    >
+      <i class="i-lucide-calendar text-primary-12"></i>
+    </div>
+    
+    
+  <div
+    class="flex items-stretch justify-center overflow-hidden rounded border border-base-6"
+  >
+    <div
+      class="whitespace-nowrap border-r-2 border-primary-9 bg-primary-3 px-4 py-2 font-semibold"
+    >
+      Ajoutée
+    </div>
+    <div class="flex h-10 items-stretch justify-center bg-base-3 px-4 py-2">
+      
+      <span format-timestamp>1784207736</span>
+    
+    </div>
+  </div>
+
+    
+  <div
+    class="flex items-stretch justify-center overflow-hidden rounded border border-base-6"
+  >
+    <div
+      class="whitespace-nowrap border-r-2 border-primary-9 bg-primary-3 px-4 py-2 font-semibold"
+    >
+      Modifiée
+    </div>
+    <div class="flex h-10 items-stretch justify-center bg-base-3 px-4 py-2">
+      
+      <span format-timestamp>1784207864</span>
+    
+    </div>
+  </div>
+
+  
+  </div>
+
+
+  
+
+  
+  <div
+    class="my-3 flex w-fit flex-wrap items-center justify-start gap-2 rounded-xl border border-dashed border-base-6 p-2"
+  >
+    <div
+      class="dark:inset-shadow grid size-10 place-items-center rounded-full border-2 border-primary-8 bg-primary-3 text-base-12"
+    >
+      <i class="i-lucide-code text-primary-12"></i>
+    </div>
+    
+    
+  <div
+    class="flex items-stretch justify-center overflow-hidden rounded border border-base-6"
+  >
+    <div
+      class="whitespace-nowrap border-r-2 border-primary-9 bg-primary-3 px-4 py-2 font-semibold"
+    >
+      Fichier source
+    </div>
+    <div class="flex h-10 items-stretch justify-center bg-base-3 px-4 py-2">
+      
+      <span
+        class="dark -my-1 rounded bg-base-1 px-4 py-1 font-mono text-base-12"
+      >
+        Apéro&#x2f;Sobrasada.cook
+      </span>
+      <a
+        href="../../src/Apéro/Sobrasada.cook"
+        class="btn btn-primary -my-1 ms-4 inline-grid size-8 place-items-center"
+        target="_blank"
+        ><i class="i-lucide-file-code"></i
+      ></a>
+    
+    </div>
+  </div>
+
+  
+  </div>
+
+</details>
+
+
+
+<!-- Controls -->
+<form
+  class="float-right my-2"
+  method="get"
+  action="Sobrasada.html"
+  hx-trigger="input changed from:#units, submit"
+  hx-swap="show:none"
+>
+  
+  <span>
+    <i class="i-lucide-ruler me-1 text-primary-11"></i>
+    <label for="units" class="sr-only">
+      Convertir les unités
+    </label>
+    <select
+      id="units"
+      name="units"
+      class="rounded border border-base-4 bg-base-2 px-1 py-0.5"
+    >
+      
+        
+        <option value="default" selected>
+          Défaut
+        </option>
+      
+        
+        <option value="metric" >
+          Métrique
+        </option>
+      
+        
+        <option value="imperial" >
+          Impérial
+        </option>
+      
+    </select>
+  </span>
+</form>
+
+<!-- Recipe content -->
+<div
+  class="content font-serif text-lg"
+  data-igr-layout="line"
+>
+  <!-- Lists -->
+  <div class="md:grid md:grid-cols-2">
+    
+      <div>
+        <h2 class="my-2 font-heading text-3xl">Ingrédients</h2>
+        <ul class="ms-6 list-disc">
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="0"
+                  data-component-ref-target="ingredient"
+                >
+                  Tomates séchées</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"g","value":{"type":"number","value":{"type":"regular","value":200.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>200</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">g</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="1"
+                  data-component-ref-target="ingredient"
+                >
+                  Noix de cajou</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"g","value":{"type":"number","value":{"type":"regular","value":120.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>120</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">g</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="2"
+                  data-component-ref-target="ingredient"
+                >
+                  Huile d&#x27;olive</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":2.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="3"
+                  data-component-ref-target="ingredient"
+                >
+                  Cumin moulu</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="4"
+                  data-component-ref-target="ingredient"
+                >
+                  Paprika fumé</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="5"
+                  data-component-ref-target="ingredient"
+                >
+                  Ail semoule</span>:
+                  
+                  <span
+                    class=" text-base-11"
+                    
+                  >
+                    
+                      
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":0.5}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>0.5</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                      
+                    
+                  </span>
+              </li>
+            
+          
+            
+            
+              <li class="w-fit">
+                
+                <span
+                  data-component-kind="ingredient"
+                  data-component-ref-group="6"
+                  data-component-ref-target="ingredient"
+                >
+                  Piment</span>
+              </li>
+            
+          
+        </ul>
+      </div>
+    
+    
+      <div>
+        <h2 class="my-2 font-heading text-3xl">Matériel</h2>
+        <ul class="ms-6 list-disc">
+          
+            
+            
+              <li class="w-fit">
+                <span
+                  data-component-kind="cookware"
+                  data-component-ref-group="0"
+                  data-component-ref-target="cookware"
+                >Mixer</span>
+              </li>
+            
+          
+        </ul>
+      </div>
+    
+  </div>
+
+  
+    <div class="float-right flex gap-2">
+      <button
+        id="igr-layout-line"
+        type="button"
+        class="btn btn-primary mt-6 grid size-9 place-items-center border-2 border-transparent"
+      >
+        <i class="i-lucide-wrap-text"></i>
+        <span class="sr-only">Compacte</span>
+      </button>
+      <button
+        id="igr-layout-list"
+        type="button"
+        class="btn btn-primary mt-6 grid size-9 place-items-center border-2 border-transparent"
+      >
+        <i class="i-lucide-layout-list"></i>
+        <span class="sr-only">Liste</span>
+      </button>
+      <button
+        id="igr-layout-hidden"
+        type="button"
+        class="btn btn-primary mt-6 grid size-9 place-items-center border-2 border-transparent"
+      >
+        <i class="i-lucide-eye-off"></i>
+        <span class="sr-only">Cachée</span>
+      </button>
+    </div>
+
+    <h2 class="mb-2 mt-6 font-heading text-3xl">Méthode</h2>
+  
+  <!-- Sections -->
+  
+    
+    
+    <div
+      class="bg-transparent transition-colors"
+      data-section-index="0"
+      id="section-0"
+    >
+      <h2 class="my-3 font-heading text-2xl">
+        
+      </h2>
+
+      <!-- Section content -->
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              1.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="0"
+                id="step-0-0"
+              >
+                <p class="grow">
+                  Egouter des 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="0"
+                        data-component-ref-target="ingredient"
+                      >tomates séchées</span>. Les mettres dans le 
+                      <span
+                        class="font-semibold text-yellow-11"
+                        data-component-kind="cookware"
+                        data-component-ref-group="0"
+                        data-component-ref-target="cookware"
+                      >mixer</span> avec 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="1"
+                        data-component-ref-target="ingredient"
+                      >noix de cajou</span>, 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="2"
+                        data-component-ref-target="ingredient"
+                      >huile d&#x27;olive</span>, 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="3"
+                        data-component-ref-target="ingredient"
+                      >cumin moulu</span>, 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="4"
+                        data-component-ref-target="ingredient"
+                      >paprika fumé</span>, 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="5"
+                        data-component-ref-target="ingredient"
+                      >ail semoule</span> et 
+                      <span
+                        class="font-semibold text-green-11"
+                        data-component-kind="ingredient"
+                        data-component-ref-group="6"
+                        data-component-ref-target="ingredient"
+                      >piment</span> au goût.
+                </p>
+
+                <!-- Ingredients line -->
+                
+                  <div class="divider igr-line-divider my-4"></div>
+                  <ul class="igr-line">
+                    <li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="0"
+                            data-component-ref-target="ingredient"
+                          >tomates séchées</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"g","value":{"type":"number","value":{"type":"regular","value":200.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>200</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">g</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="1"
+                            data-component-ref-target="ingredient"
+                          >noix de cajou</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"g","value":{"type":"number","value":{"type":"regular","value":120.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>120</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">g</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="2"
+                            data-component-ref-target="ingredient"
+                          >huile d&#x27;olive</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cs","value":{"type":"number","value":{"type":"regular","value":2.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>2</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cs</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="3"
+                            data-component-ref-target="ingredient"
+                          >cumin moulu</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="4"
+                            data-component-ref-target="ingredient"
+                          >paprika fumé</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":1.0}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>1</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="5"
+                            data-component-ref-target="ingredient"
+                          >ail semoule</span>:
+                            <span class="text-base-11">
+                              
+  <span
+    
+      class="-m-0.5 cursor-pointer rounded p-0.5 hover:bg-base-3
+      transition-colors whitespace-nowrap" hx-post="/convert_modal"
+      hx-trigger="click[isPopoverClosed()]" hx-vals='{"unit":"cc","value":{"type":"number","value":{"type":"regular","value":0.5}}}'
+      hx-target="body" hx-swap="beforeend" hx-ext="json-enc" data-auto-id
+    
+  >
+    <span data-quantity-value>
+    <span format-number>0.5</span>
+  </span>
+    
+      <span data-quantity-unit class="italic">cc</span>
+    
+  </span>
+                            </span>
+                          
+                        </li><li>
+                          <span
+                            data-component-kind="ingredient"
+                            data-component-ref-group="6"
+                            data-component-ref-target="ingredient"
+                          >piment</span>
+                        </li>
+                  </ul>
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              2.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="1"
+                id="step-0-1"
+              >
+                <p class="grow">
+                  Mixer jusqu&#x27;à ce que les noix de cajou soient bien broyées et que le mélange soit homogène. Ajouter peut-être un peu d&#x27;eau si nécessaire.
+                </p>
+
+                <!-- Ingredients line -->
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+        
+          <!-- Step -->
+          
+          
+          <div class="my-6 flex">
+            <span class="me-2 mt-2 font-sans font-semibold text-primary-12">
+              3.
+            </span>
+            <div class="flex flex-grow flex-col-reverse gap-2 lg:flex-row">
+              <div
+                class="grow flex-col rounded border border-base-6 bg-base-2 p-4 shadow transition-colors"
+                data-step-index="2"
+                id="step-0-2"
+              >
+                <p class="grow">
+                  Corriger en ajoutant plein de piment.
+                </p>
+
+                <!-- Ingredients line -->
+                
+              </div>
+              
+              
+            </div>
+          </div>
+        
+      
+    </div>
+  
+</div>
+
+<script src="../../js/recipe.js" defer></script>
     
   </div>
 
